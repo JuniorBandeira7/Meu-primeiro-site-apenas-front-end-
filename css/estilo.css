@@ -1,0 +1,209 @@
+    html, body{height: 100%;}
+    #geral{
+        min-height: 100%;       
+        width: 100%;
+        background: rgb(233, 235, 231);
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background: rgb(233, 235, 231);
+        margin: 0px;
+        margin-top: 100px;
+        padding: 0px;
+
+    }
+    #footerp{
+        margin-top: 37.5px;
+    }
+    footer{
+        bottom: 0;
+        width: 100%;
+        background: rgb(194, 196, 191);
+        height: 75px;
+        display: flex;
+        justify-content: center;
+          
+    }
+    #section-dos-posts{
+        width: 70vw;
+        min-height: 100%;
+        max-height: 99999px;
+        display: inline-flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background: rgb(233, 235, 231);
+        margin-left: 15%;
+        margin-top: 0px;
+        margin-right: 0px;
+        overflow: visible;
+    }
+    div#divheader{
+        width: 0px;
+        height: 100px;
+        margin-top: 0px;
+    }
+    div{
+        margin-left: 20px;
+        margin-right: 20px;
+        background: white;
+        width: 330px;
+        height: 430px;
+        margin-top: 40px;
+    }
+    a#logo{
+        margin-left: 5%;
+        font-size: 17pt;
+        font-weight: bolder;
+    }
+    .aheader{
+        margin-left: 30px;
+        font-size: 15pt;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        text-decoration: none;
+        display: inline;/** muda a regra do "a", que originalmente é em bloco, para em linha**/ 
+    }
+    .abotao{
+        color: black;
+        text-decoration: none;
+    }
+    a#cadastrarposts{ 
+        margin-left: 34%;
+
+    }
+    div#busca{
+        border-radius: 20px;
+        width: 170px;
+        height: 37px;
+        background: rgb(194, 196, 191);
+        position: relative;
+    }
+    input{
+
+        border-radius: 10px;
+        border: none;
+    }
+    button{
+        border-radius: 10px;
+        margin-right: -10px;
+        border: none;
+        padding: 8px 10px;
+    }
+    form{
+        display: inline;
+        margin-left: 4%;
+        background: white;
+        border-radius: 10px;
+    }
+    .titulodopost{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .conteudodopost{
+        width: 310px;
+        height: 290px;
+        margin-left: 5%;
+        margin-right: 5%;
+        overflow: hidden;
+          
+    }
+    .acessar{
+        width: 165px;
+        height: 50px;
+        background: rgb(233, 235, 231);
+        margin-left: 82.5px;
+        margin-top: 0px;
+        display: inline-flex;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    #cadastrarposts:hover{
+        background: rgba(0, 0, 0, .05);
+    }
+    #exibirposts:hover{
+        background: rgba(0, 0, 0, .05);
+    }
+    #logo:hover{
+        background: rgba(0, 0, 0, .05);
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgb(194, 196, 191);
+        height: 100px;
+        opacity: 0.9;
+        display: flex;
+        transition: .6s;
+        align-items: center;
+    }
+    #btn-mobile{
+        display: none;
+    }
+    @media(max-width: 1154px){
+        #btn-mobile{
+            display: flex;
+            position: fixed;
+            margin-left: 85%;
+            cursor: pointer;
+            background: none;
+            gap: .5rem;
+        }
+        #hamburguer{
+            width: 20px;
+            border-top: 2px solid;   
+            transition: .6s;
+        }
+        #hamburguer::after, #hamburguer::before{
+            width: 20px;
+            height: 2px;
+            content: '';
+            background: currentColor;
+            display: block;
+            margin-top: 3px;
+        }
+        form{
+            margin-left: 1%;
+        }
+        #cadastrarposts{
+            display: none;
+            overflow-y: hidden;  
+        }
+        #exibirposts{
+            display: none;
+            overflow-y: hidden;   
+        }
+        nav.active{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            height: 100%;
+            align-items: baseline;
+        }
+        nav.active #exibirposts{
+            display: block;
+            margin-left: 10px;
+            margin-top: 10px;
+            position: relative;
+        }
+        nav.active #cadastrarposts{
+            display: block;
+            margin-left: 10px;
+            margin-top: 3%;
+            position: relative;
+        }
+        nav.active form{
+            display: none;
+        }
+        nav.active #btn-mobile{
+            margin-top: 35px;
+        }
+        nav.active #logo{
+            margin-top: 35px;
+        }
+        nav.active #hamburguer{
+            transform: rotate(90deg);
+        }
+    }
